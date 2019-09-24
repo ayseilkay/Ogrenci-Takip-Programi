@@ -1,0 +1,57 @@
+﻿
+@model OgrenciTakipEt.Models.Ogrenci
+
+@{
+    ViewBag.Title = "Tesekkur";
+}
+
+<h2>Kayıt Başarı ile gerçekleşmiştir.</h2>
+<h2>Teşekkür ederiz..</h2>
+<br />
+<br />
+<table>
+    <tr>
+        <td>Ad:</td>
+        <td>@Model.Ad</td>
+    </tr>
+    <tr>
+        <td>Soyad:</td>
+        <td>@Model.Soyad</td>
+    </tr>
+    <tr>
+        <td>Bölüm:</td>
+        <td>@Model.Bolum</td>
+    </tr>
+    <tr>
+        <td>E-posta:</td>
+        <td>@Model.Posta</td>
+    </tr>
+    <tr>
+        <td>Telefon:</td>
+        <td>@Model.Tel</td>
+    </tr>
+    <tr>
+        <td>İşyeri:</td>
+        <td>@Model.isyeri</td>
+    </tr>
+    <tr>
+        <td>Adres:</td>
+        <td>@Model.Adres</td>
+    </tr>
+    <tr>
+        <td>Şehir:</td>
+        <td>@Model.Sehir</td>
+    </tr>
+    <tr>
+        <td>Resim:</td>
+        <td><img src="@Url.Content("~/Resimler/"+Model.Resim)" width="150" /></td>
+    </tr>
+
+</table>
+<br /><br /><br /><br />
+<table>
+    <tr>
+        <td width="250"><a href="~/Home/index">Ana Sayfaya Git</a></td>
+        <td><a href="~/Home/indexBolum">Bölüm Girişi Sayfasına Gidiniz</a></td>
+    </tr>
+</table>

@@ -1,0 +1,21 @@
+﻿
+@model OgrenciTakipEt.Models.Bolumler
+
+@{
+    ViewBag.Title = "IndexBolum";
+}
+
+<h2>IndexBolum</h2>
+
+<br /><br />
+@using (Html.BeginForm())
+{
+    <table border="0">
+        <tr>
+            <td>Bölüm Adı:</td>
+            <td> @Html.TextBoxFor(m => m.Bolum, null, new { style = "width:1500px;" })</td>
+        </tr>
+    </table>
+    <br /><br />
+    <input type="submit" value="Kaydet" />
+}

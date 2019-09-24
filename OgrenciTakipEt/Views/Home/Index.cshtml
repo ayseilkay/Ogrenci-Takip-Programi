@@ -1,0 +1,54 @@
+﻿
+@model OgrenciTakipEt.Models.Ogrenci
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form method="post" enctype="multipart/form-data">
+
+    @using (Html.BeginForm())
+    {
+        <table border="0">
+            <tr>
+                <td>Adı:</td>
+                <td> @Html.TextBoxFor(m => m.Ad, null, new { style = "width:1500px;" })</td>
+            </tr>
+            <tr>
+                <td>Soyadı:</td>
+                <td> @Html.TextBoxFor(m => m.Soyad, null, new { style = "width:1500px;" })</td>
+            </tr>
+            <tr>
+                <td>Bölüm:</td>
+                <td> @Html.DropDownList("Bolum", (SelectList)ViewBag.BolumListesi, null, new { style = "width:1500px;" })</td>
+            </tr>
+            <tr>
+                <td>E-posta:</td>
+                <td> @Html.TextBoxFor(m => m.Posta, null, new { style = "width:1500px;" })</td>
+            </tr>
+            <tr>
+                <td>Telefon:</td>
+                <td> @Html.TextBoxFor(m => m.Tel, null, new { style = "width:1500px;" })</td>
+            </tr>
+            <tr>
+                <td>İşyeri:</td>
+                <td> @Html.TextBoxFor(m => m.isyeri, null, new { style = "width:1500px;" })</td>
+            </tr>
+            <tr>
+                <td>Adres:</td>
+                <td> @Html.TextBoxFor(m => m.Adres, null, new { style = "width:1500px;" })</td>
+            </tr>
+            <tr>
+                <td>Şehir:</td>
+                <td> @Html.DropDownList("Sehir", (SelectList)ViewBag.CityList, null, new { style = "width:1500px;" })</td>
+            </tr>
+            <tr>
+                <td>Resim:</td>
+                <td><input type="file" name="Dosyaicerigi" /></td>
+            </tr>
+        </table>
+        <br /><br />
+        <input type="submit" value="Kaydet" />
+    }
+
+</form>
